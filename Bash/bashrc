@@ -1,0 +1,38 @@
+#=====================
+# 1. interactive check
+#=====================
+case $- in
+*i*) ;;
+*) return ;;
+esac
+
+#=====================
+# 2. shell options (shopt)
+#=====================
+shopt -s histappend
+shopt -s checkwinsize
+
+#=====================
+# 3. History setting
+#=====================
+HISTCONTROL=ignoreboth
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+#=====================
+# 4. bash-completion
+#=====================
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+#=====================
+# 5. load dotfiles
+#=====================
+for file in "$HOME"/dotfiles/Bash/*.sh; do
+  [ -r "$file" ] && source "$file"
+done
