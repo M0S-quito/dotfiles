@@ -17,3 +17,16 @@ export PATH="$HOME/apps/nvim-linux-x86_64/bin:${PATH}"
 # set -a
 # source .env
 # set +a
+
+# ==================
+# scripts
+# ==================
+SCRIPTS_DIR="$HOME/dotfiles/shell/scripts"
+
+for file in "$SCRIPTS_DIR"/*.sh; do
+  [ -r "$file" ] && source "$file"
+done
+
+diary() {
+  make_today "$@"
+}
