@@ -33,6 +33,6 @@ fi
 #=====================
 # 5. load dotfiles
 #=====================
-for file in "$HOME"/dotfiles/Bash/*.sh; do
+for file in "$HOME"/dotfiles/shell/*.sh; do
   [ -r "$file" ] && source "$file"
 done
