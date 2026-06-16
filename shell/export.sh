@@ -26,7 +26,3 @@ SCRIPTS_DIR="$HOME/dotfiles/shell/scripts"
 for file in "$SCRIPTS_DIR"/*.sh; do
   [ -r "$file" ] && source "$file"
 done
-
-diary() {
-  make_today "$@"
-}
