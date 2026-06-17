@@ -30,7 +30,7 @@ setup_window_0() {
   # panel setup
   tmux send-keys -t ${TMUX_SESSION}:${WINDOW}.0 "echo project app" C-m
   tmux send-keys -t ${TMUX_SESSION}:${WINDOW}.1 "echo project app" C-m
-  tmux send-keys -t ${TMUX_SESSION}:${WINDOW}.2 "make_today" C-m
+  tmux send-keys -t ${TMUX_SESSION}:${WINDOW}.2 "diary" C-m
 }
 
 setup_window_1() {
@@ -73,13 +73,16 @@ setup_window_3() {
 #====================
 # window_0
 #====================
-make_today() {
+
+diary() {
   DIARY_DIR="$HOME/dotfiles/secret/diary"
   local today
   today=$(date +%F)
 
   mkdir -p "$DIARY_DIR"
-  nvim "$DIARY_DIR/$today.md"
+  touch "${DIARY_DIR}/${today}.md"
+
+  nvim $(find ${DIARY_DIR} -name "*.md" | sort -r)
 }
 
 #====================
