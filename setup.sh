@@ -39,8 +39,8 @@ ln -sfn "${DOTFILES}/shell/bashrc" "${HOME}/.bashrc"
 backup "${HOME}/.profile"
 ln -sfn "${DOTFILES}/shell/profile" "${HOME}/.profile"
 
-backup "${HOME}/.config/nvim"
-ln -sfn "${DOTFILES}/config/nvim" "${HOME}/.config/nvim"
+backup "${HOME}/.config/nvim/"
+ln -s "${DOTFILES}/config/starter_lazyvim" "${HOME}/.config/nvim"
 
 backup "${HOME}/.tmux.conf"
 ln -sfn "${DOTFILES}/config/tmux/.tmux.conf" "${HOME}/.tmux.conf"
