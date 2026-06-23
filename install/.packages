@@ -6,7 +6,6 @@ PACKAGES=(
   fd-find
   btop
   nethogs
-  ss
   iftop
   fzf
 )
