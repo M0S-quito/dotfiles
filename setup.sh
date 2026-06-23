@@ -11,13 +11,17 @@ if [ ! -d "${DOTFILES}" ]; then
   exit 1
 fi
 
-# 섪치파일 받아 오기
+# 설치파일 받아 오기
 source "${DOTFILES}/install/.packages"
 
 if command -v apt >/dev/null 2>&1; then
   source "${DOTFILES}/install/apt.sh"
   install_apt
 fi
+
+# other 설치 파일 가져오기
+source "${DOTFILES}/install/other.sh"
+install_nvim
 
 # 기존 dotfiles 백업 폴더
 BACKUP="$HOME/.dotfiles_backup"
