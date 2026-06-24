@@ -20,7 +20,7 @@ install_nvim() {
   rm -f "$TAR_FILE"
 
   echo ">> linking"
-  ln -sf "${BASE_DIR}/nvim-linux-x86_64/bin/nvim" "${HOME}/usr/bin/nvim"
+  sudo ln -sf "${BASE_DIR}/nvim-linux-x86_64/bin/nvim" "/usr/bin/nvim"
 
   echo ">> done"
   nvim --version

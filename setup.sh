@@ -26,6 +26,7 @@ install_nvim
 # 기존 dotfiles 백업 폴더
 BACKUP="$HOME/.dotfiles_backup"
 mkdir -p "${BACKUP}"
+mkdir -p "${HOME}/.config"
 
 backup() {
   if [ -e "$1" ] && [ ! -L "$1" ]; then
@@ -43,6 +44,7 @@ ln -sfn "${DOTFILES}/shell/bashrc" "${HOME}/.bashrc"
 backup "${HOME}/.profile"
 ln -sfn "${DOTFILES}/shell/profile" "${HOME}/.profile"
 
+mkdir -p "${HOME}/.config/nvim"
 backup "${HOME}/.config/nvim/"
 ln -s "${DOTFILES}/config/starter_lazyvim" "${HOME}/.config/nvim"
 

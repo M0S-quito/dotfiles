@@ -1,6 +1,7 @@
 PACKAGES=(
   git
   tmux
+  neovim
   ripgrep
   fd-find
   btop
