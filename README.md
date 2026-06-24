@@ -29,6 +29,14 @@
 - shell/      # Shell settings and utility scripts
 - setup.sh    # Environment setup entry point
 
+## install
+```
+git clone https://github.com/M0S-quito/dotfiles.git
+bash dotfiles/setup.sh
+```
+```
+
+```
 ---
 
 ## Neovim
