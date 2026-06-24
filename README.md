@@ -10,8 +10,6 @@
 - Shell
 - Bash
 
----
-
 ## Included
 - Shell configuration
 - Git configuration
@@ -21,28 +19,20 @@
 - Setup
 - ./setup.sh
 
----
-
 ## Structure
 - config/     # Application configurations
 - install/    # Package installation scripts
 - shell/      # Shell settings and utility scripts
 - setup.sh    # Environment setup entry point
 
-## install
-```
+## Install
 git clone https://github.com/M0S-quito/dotfiles.git
 bash dotfiles/setup.sh
 ```
 ```
 
-```
----
-
 ## Neovim
 > The Neovim configuration is based on LazyVim Starter and includes personal modifications.
-
---- 
 
 ### License
 `MIT`
