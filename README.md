@@ -26,11 +26,13 @@
 - setup.sh    # Environment setup entry point
 
 ## Install
+```
+```
 git clone https://github.com/M0S-quito/dotfiles.git
 bash dotfiles/setup.sh
 ```
-```
 
+```
 ## Neovim
 > The Neovim configuration is based on LazyVim Starter and includes personal modifications.
 
