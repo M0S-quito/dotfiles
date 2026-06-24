@@ -54,4 +54,5 @@ ln -sfn "${DOTFILES}/config/tmux/.tmux.conf" "${HOME}/.tmux.conf"
 backup "${HOME}/.gitconfig"
 ln -sfn "${DOTFILES}/config/git/.gitconfig" "${HOME}/.gitconfig"
 
+source "${HOME}/.bashrc"
 echo ">>> done!"
