@@ -2,6 +2,7 @@ PACKAGES=(
   git
   tmux
   neovim
+  build-essential
   ripgrep
   fd-find
   btop

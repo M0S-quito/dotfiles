@@ -26,11 +26,13 @@ setup_window_0() {
   #panel split
   tmux split-window -h -t ${TMUX_SESSION}:${WINDOW}.0
   tmux split-window -v -t ${TMUX_SESSION}:${WINDOW}.0
+  tmux split-window -v -t ${TMUX_SESSION}:${WINDOW}.2
 
   # panel setup
   tmux send-keys -t ${TMUX_SESSION}:${WINDOW}.0 "echo project app" C-m
   tmux send-keys -t ${TMUX_SESSION}:${WINDOW}.1 "echo project app" C-m
   tmux send-keys -t ${TMUX_SESSION}:${WINDOW}.2 "diary" C-m
+  tmux send-keys -t ${TMUX_SESSION}:${WINDOW}.3 "TODO" C-m
 }
 
 setup_window_1() {
@@ -83,6 +85,15 @@ diary() {
   touch "${DIARY_DIR}/${today}.md"
 
   nvim $(find ${DIARY_DIR} -name "*.md" | sort -r)
+}
+
+TODO() {
+  TODO_DIR="${HOME}/dotfiles/secret"
+
+  mkdir -p "${TODO_DIR}"
+  touch -p "${TODO_DIR}/TODO.md"
+
+  nvim "${TODO_DIR}/TODO.md"
 }
 
 #====================
